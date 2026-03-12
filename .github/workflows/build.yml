@@ -18,10 +18,10 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       - name: Restore NuGet packages
-        run: nuget restore SimHub.MQTTPublisher.sln
+        run: nuget restore SimHubMQTTPublisher.sln
 
       - name: Build Release
-        run: msbuild SimHub.MQTTPublisher.sln /p:Configuration=Release
+        run: msbuild SimHubMQTTPublisher.sln /p:Configuration=Release
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
